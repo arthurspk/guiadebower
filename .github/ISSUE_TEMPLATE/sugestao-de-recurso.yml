@@ -1,0 +1,56 @@
+name: 💡 Sugestão de recurso
+description: Sugira um guia de migração, ferramenta, vídeo, livro ou comunidade para o guia.
+title: "[Recurso]: "
+labels: ["sugestão"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado pela sugestão! Leia os critérios em [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) antes de enviar. Só aceitamos conteúdo legal, com link funcionando, e relevante para um guia sobre um tema depreciado (contexto histórico, migração para npm/Yarn, manutenção de projetos legados).
+  - type: input
+    id: nome
+    attributes:
+      label: Nome do recurso
+      placeholder: "Ex.: Ferramenta X para migrar bower.json para package.json"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - Roadmap / linha do tempo
+        - Documentação oficial
+        - Por onde começar
+        - Guias e ferramentas de migração
+        - Livros
+        - Vídeos e canais no Youtube
+        - Ferramentas do ecossistema
+        - Projetos práticos e desafios de migração
+        - Manutenção de projetos legados
+        - IA na prática
+        - Carreira e vagas
+        - Comunidades
+    validations:
+      required: true
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que incluir?
+      description: Uma ou duas linhas sobre o que é e por que vale o clique. Diga se é gratuito ou pago.
+    validations:
+      required: true
+  - type: checkboxes
+    id: criterios
+    attributes:
+      label: Confirmação
+      options:
+        - label: O link está funcionando e o conteúdo é legal (não é material pirateado).
+          required: true
